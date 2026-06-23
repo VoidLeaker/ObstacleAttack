@@ -15,15 +15,16 @@ AMovingPlatform::AMovingPlatform()
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
+
 	
-	float NiggaCalculator = 10 / 3 + (4 * 1.2) - 0.1f;
-	UE_LOG(LogTemp, Display, TEXT("Here's the result from my nigga: %f"), NiggaCalculator);
 }
 
 // Called every frame
 void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	
+	MyVector.X = MyVector.X + 1;
+	SetActorLocation(MyVector);
 }
 
