@@ -24,12 +24,5 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere)
-	float MemberFloat = 10.0f;
-
-	UPROPERTY(VisibleAnywhere)
-	int MemberInt = 10;
-
-	UPROPERTY(EditAnywhere)
-	FVector MyVector = FVector(300.0f, 1290.0f, 740.0f);
-
+	FVector PlatformVelocity = FVector(0.0f, 0.0f, 0.0f);
 };
