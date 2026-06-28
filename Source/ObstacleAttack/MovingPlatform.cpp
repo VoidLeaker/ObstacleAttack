@@ -21,19 +21,28 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 
+	MyTestFunction();
+
 }
 
 // Called every frame
 void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
+
+	MovePlatform(DeltaTime);
+}
+
+void AMovingPlatform::MovePlatform(float DeltaTime)
+{
 	FVector CurrentLocation = GetActorLocation();
 
 	CurrentLocation = CurrentLocation + (PlatformVelocity * DeltaTime);
 
 	SetActorLocation(CurrentLocation);
-
-	MyTestFunction();
 }
 
+void AMovingPlatform::RotatePlatform(float DeltaTime)
+{
+	// Rotates the platform
+}
